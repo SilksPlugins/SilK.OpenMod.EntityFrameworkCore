@@ -1,0 +1,5 @@
+packages:
+- id: OpenMod.EntityFrameworkCore
+  version: 3.0.26
+- id: Pomelo.EntityFrameworkCore.MySql
+  version: 3.2.5
