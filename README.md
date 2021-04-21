@@ -1,6 +1,8 @@
 # SilK.OpenMod.EntityFrameworkCore
 A OpenMod plugin which adds the ability to use Pomelo's MySQL EF Core.
 
+> **DISCLAIMER:** The hotloader for OpenMod cannot be disabled or else this won't work.
+
 ## Usage
 
 There are three steps to including SilK.OpenMod.EntityFrameworkCore in your OpenMod plugin:
