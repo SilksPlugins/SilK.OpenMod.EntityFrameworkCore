@@ -4,7 +4,7 @@ using System.IO;
 
 namespace SilK.OpenMod.EntityFrameworkCore
 {
-    internal sealed class PomeloMySqlConnectorResolver
+    public sealed class PomeloMySqlConnectorResolver
     {
         public PomeloMySqlConnectorResolver(ILogger<PomeloMySqlConnectorResolver> logger)
         {
@@ -32,6 +32,8 @@ namespace SilK.OpenMod.EntityFrameworkCore
             var assemblyBytes = memStream.ToArray();
 
             Hotloader.LoadAssembly(assemblyBytes);
+
+            logger.LogDebug("Loaded MySqlConnector v0.69 into Hotloader");
         }
     }
 }
