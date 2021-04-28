@@ -12,15 +12,11 @@ namespace SilK.OpenMod.EntityFrameworkCore
         protected OpenModPomeloDbContext(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             _serviceProvider = serviceProvider;
-
-            _serviceProvider.GetRequiredService<PomeloMySqlConnectorResolver>();
         }
 
         protected OpenModPomeloDbContext(DbContextOptions<TSelf> options, IServiceProvider serviceProvider) : base(options, serviceProvider)
         {
             _serviceProvider = serviceProvider;
-
-            _serviceProvider.GetRequiredService<PomeloMySqlConnectorResolver>();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
