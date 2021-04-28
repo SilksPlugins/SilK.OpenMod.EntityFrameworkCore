@@ -9,15 +9,15 @@ There are three steps to including SilK.OpenMod.EntityFrameworkCore in your Open
 
 - Include the NuGet package in your project - `Install-Package SilK.OpenMod.EntityFrameworkCore`
 
-- Add the PomeloMySqlConnectorResolver to your service configurator:
+- Add the PomeloMySqlConnectorResolver to your container configurator:
   ```cs
-  public class ServiceConfigurator : IServiceConfigurator
+  public class ContainerConfigurator : IContainerConfigurator
   {
-      public void ConfigureServices(IOpenModServiceConfigurationContext openModStartupContext,
-          IServiceCollection serviceCollection)
+      public void ConfigureContainer(IOpenModServiceConfigurationContext openModStartupContext,
+          ContainerBuilder containerBuilder)
       {
           ...
-          serviceCollection.AddPomeloMySqlConnectorResolver();
+          containerBuilder.AddPomeloMySqlConnectorResolver();
           ...
       }
   }
